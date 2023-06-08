@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#FF5A5F];
+  }
+}
+
+.icon-box {
+  @apply grid flex-shrink-0 rounded-full w-9 h-9 place-items-center hover:bg-slate-200 sm:cursor-pointer;
+}
+
+.text-redText {
+  --tw-text-opacity: 1;
+  color: rgb(223 105 81 / var(--tw-text-opacity));
+}
+
+.text-purpleText {
+  --tw-text-opacity: 1;
+  color: rgb(24 30 75 / var(--tw-text-opacity));
+}
+
+.text-lightPurpleText {
+  --tw-text-opacity: 1;
+  color: rgb(94 98 130 / var(--tw-text-opacity));
+}
+
+.bg-yellowColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 165 1 / var(--tw-bg-opacity));
+}
+
+.text-textWhite {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/*  */
+.tour-itinerary .accordion-panel {
+  @apply relative pl-12 before:absolute before:z-10 before:-top-[3px] lg:before:-top-[2px] before:left-0 before:w-8 before:h-8 before:leading-[2rem] before:bg-slate-200 before:rounded-full before:text-lg before:text-gray-400 first:before:bg-sky-500 first:before:text-white last:before:bg-red-500 last:before:text-white before:text-center after:bg-gray-200 after:w-px after:h-full after:absolute after:top-0 after:left-[16px] last:after:hidden;
+}
+
+.tour-itinerary .accordion-start {
+  @apply before:bg-green-500 before:text-white;
+}
+
+.tour-itinerary .accordion-panel.active {
+  @apply after:h-[calc(100%+2.5rem)];
+}
+
+.tour-itinerary .accordion-trigger {
+  @apply cursor-pointer pb-8 text-base lg:text-lg font-semibold text-slate-600 before:transition-all before:absolute before:top-0 before:right-0 before:text-slate-400 before:opacity-0 hover:before:opacity-100;
+}
+
+.tour-itinerary .accordion-panel.active .accordion-trigger {
+  @apply p-0 before:opacity-100;
+}
+
+.tour-itinerary .accordion-trigger span {
+  @apply text-slate-400 font-medium pointer-events-none transition-all;
+}
+
+.tour-itinerary .accordion-panel.active .accordion-trigger span,
+.tour-itinerary .accordion-panel:hover .accordion-trigger span {
+  @apply text-slate-600;
+}
+
+.tour-itinerary .accordion-panel:last-child .accordion-trigger {
+  @apply pb-0;
+}
+
+.tour-itinerary .accordion-panel .accordion-content {
+  @apply hidden p-5 mt-8 mb-10 bg-white border border-solid border-gray-200 rounded-lg text-sm text-slate-500;
+}
+
+.tour-itinerary .accordion-panel.active .accordion-content {
+  @apply block;
+}
+
+.tour-itinerary .accordion-panel .accordion-content p {
+  @apply leading-6 mb-5 last:mb-0;
+}
+/* bg-[#FAF8ED] */
+
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet-top {
+  z-index: 0 !important;
+}
+
+.rdrMonth {
+  width: 100% !important;
+}
+
+.rdrCalendarWrapper {
+  font-size: 16px !important;
+  width: 100% !important;
+}
