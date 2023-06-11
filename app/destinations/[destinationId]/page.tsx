@@ -1,5 +1,5 @@
-import getCurrentUser from "@/actions/getCurrentUser";
-import getDestinationsById from "@/actions/getDestinationsById";
+import getCurrentUser from "@/app/actions/getCurrentUser";
+import getDestinationsById from "@/app/actions/getDestinationsById";
 import ClientOnly from "@/components/ClientOnly";
 import ListingContainer from "@/components/listing/ListingContainer";
 

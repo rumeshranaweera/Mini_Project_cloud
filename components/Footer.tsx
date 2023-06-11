@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import {
@@ -14,9 +15,9 @@ function Footer({}: Props) {
       <div className="flex md:flex-row flex-col items-center justify-between">
         <div className="flex flex-col items-start gap-10 basis-1/3">
           <div className="flex items-center justify-center gap-2">
-            <img src="/images/Logo.png" alt="logo" />
-            <h1 className="text-lg text-secondary-100 font-bold">
-              Be<span className="text-primary-500">e</span>Travel
+            <img src="https://dl.dropboxusercontent.com/s/ywn0n6m41kep83t/image.png" alt="logo" className="h-16 rounded-md"/> 
+            <h1 className="text-sm text-secondary-100 font-bold">
+              <span className="text-primary-500"></span>Onine Booking <br/>Reservation <br/>App
             </h1>
           </div>
           <p>Top 3 in the World</p>

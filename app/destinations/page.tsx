@@ -1,12 +1,12 @@
-import getCurrentUser from "@/actions/getCurrentUser";
-import getDestinations, {
-  IDestinationsParams,
-} from "@/actions/getDestinations";
 import ClientOnly from "@/components/ClientOnly";
 import SearchingFilter from "@/components/SearchingFilter";
 import BestPlaces from "@/components/destinations/BestPlaces";
 import FeaturedDestinations from "@/components/destinations/FeaturedDestinations";
 import TopTours from "@/components/destinations/TopTours";
+import getDestinations, {
+  IDestinationsParams,
+} from "../actions/getDestinations";
+import getCurrentUser from "../actions/getCurrentUser";
 
 type Props = {
   searchParams: IDestinationsParams;

@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import prisma from "@/lib/prismadb";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import { getServerSession } from "next-auth/next";

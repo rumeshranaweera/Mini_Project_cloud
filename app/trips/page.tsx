@@ -1,8 +1,8 @@
-import getCurrentUser from "@/actions/getCurrentUser";
-import getDestinations from "@/actions/getDestinations";
 import ClientOnly from "@/components/ClientOnly";
 import EmptyState from "@/components/EmptyState";
 import DestinationsClient from "@/components/destinations/DestinationsClient";
+import getCurrentUser from "../actions/getCurrentUser";
+import getDestinations from "../actions/getDestinations";
 
 type Props = {};
 

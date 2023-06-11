@@ -58,50 +58,50 @@ function Navbar({ currentUser }: Props) {
           <RentModal isOpen={rentIsOpen} onClose={onCloseRent} />
         )
       )}
-      <div className="px-48 py-6">
+      <div className="px-40 py-6">
         <div className="flex items-center justify-between">
           <div>
-            {/*    <img
-              src="https://media.beliefnet.com/~/media/images/components/mini-headers/entertainment/travel/mini-header-travel-logo.png?as=0"
+                <img
+              src="https://dl.dropboxusercontent.com/s/ywn0n6m41kep83t/image.png"
               alt=""
-              className="w-10"
-            /> */}
+              className="h-14 rounded-md"
+            /> 
           </div>
           <div className="flex items-center space-x-12 z-50">
             <p
               onClick={() => router.push("/")}
-              className="font-semibold cursor-pointer hover:underline"
+              className="font-semibold cursor-pointer hover:underline uppercase"
             >
               Home
             </p>
             <p
               onClick={() => router.push("/destinations")}
-              className="font-semibold cursor-pointer hover:underline"
+              className="font-semibold cursor-pointer hover:underline uppercase"
             >
               Destinations
             </p>
             <p
               onClick={() => router.push("/hotel")}
-              className="font-semibold cursor-pointer hover:underline"
+              className="font-semibold cursor-pointer hover:underline uppercase"
             >
               Hotels
             </p>
             <p
               onClick={() => router.push("/flight")}
-              className="font-semibold cursor-pointer hover:underline"
+              className="font-semibold cursor-pointer hover:underline uppercase"
             >
               Flights
             </p>
             <p
               onClick={() => router.push("/car")}
-              className="font-semibold cursor-pointer hover:underline"
+              className="font-semibold cursor-pointer hover:underline uppercase"
             >
               Cars
             </p>
             {!currentUser && (
               <p
                 onClick={() => setIsOpen(true)}
-                className="font-semibold cursor-pointer hover:underline"
+                className="font-semibold cursor-pointer hover:underline uppercase"
               >
                 Become a Hoister
               </p>

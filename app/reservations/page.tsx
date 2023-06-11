@@ -1,8 +1,8 @@
-import getCurrentUser from "@/actions/getCurrentUser";
-import getReservation from "@/actions/getReservations";
 import ClientOnly from "@/components/ClientOnly";
 import EmptyState from "@/components/EmptyState";
 import TripsClient from "@/components/listing/TripsClient";
+import getCurrentUser from "../actions/getCurrentUser";
+import getReservation from "../actions/getReservations";
 
 type Props = {};
 

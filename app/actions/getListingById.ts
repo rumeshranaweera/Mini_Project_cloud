@@ -1,16 +1,18 @@
+export const dynamic = "force-static";
+
 import prisma from "@/lib/prismadb";
 
 interface IParams {
-  destinationId?: string;
+  listingId?: string;
 }
 
-export default async function getDestinationsById(params: IParams) {
+export default async function getListingById(params: IParams) {
   try {
-    const { destinationId } = params;
+    const { listingId } = params;
 
-    const listing = await prisma.destinations.findUnique({
+    const listing = await prisma.listing.findUnique({
       where: {
-        id: destinationId,
+        id: listingId,
       },
       include: {
         user: true,

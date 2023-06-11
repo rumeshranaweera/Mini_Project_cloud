@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import prisma from "@/lib/prismadb";
 
 export interface IDestinationsParams {
