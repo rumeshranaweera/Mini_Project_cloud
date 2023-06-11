@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { CldUploadWidget } from "next-cloudinary";
@@ -26,7 +25,7 @@ function ImageUpload({ onChange, value }: Props) {
   return (
     <CldUploadWidget
       onUpload={handleCallback}
-      uploadPreset="bupekkcd"
+      uploadPreset="qyvyqfnu"
       options={{
         maxFiles: 1,
       }}
