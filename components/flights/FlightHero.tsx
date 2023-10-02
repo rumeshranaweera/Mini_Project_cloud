@@ -24,7 +24,7 @@ function FlightHero({}: Props) {
                   Best Destinations around the world
                 </span>
                 <span className="font-bold text-6xl text-purpleText z-50">
-                  Travel, enjoy and live a new and full life
+                  Explore, Savor, and Embrace a Fresh and Vibrant Journey
                 </span>
                 <img
                   src="/images/Decore_line.png"

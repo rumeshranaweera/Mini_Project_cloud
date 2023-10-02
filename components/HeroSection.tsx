@@ -2,6 +2,7 @@
 
 import { SafeUser } from "@/types";
 import Navbar from "./Navbar";
+import Image from "next/image";
 
 type Props = {
   currentUser?: SafeUser | null;
@@ -11,40 +12,32 @@ function HeroSection({ currentUser }: Props) {
   return (
     <div className="px-60 py-6">
       <div>
-        <img
-          src="/images/Decore.png"
-          className="absolute right-0 top-0"
-          alt=""
-        />
+        <img src="/blob-haikei.svg" className="absolute right-0 top-0" alt="" />
       </div>
-      <div className="pt-60 flex items-center">
+      <div className="pt-48 flex items-center">
         <div className="w-[450px]">
           <div>
             <div className="grid gap-4">
               <div className="grid gap-4">
-                <span className="text-redText font-bold text-2xl">
+                <span className="text-blue-800 font-bold text-2xl">
                   Best Destinations around the world
                 </span>
-                <span className="font-bold text-6xl text-purpleText z-50">
-                  Travel, enjoy and live a new and full life
+                <span className="font-bold text-6xl text-purpleText z-50  [text-wrap:balance]">
+                  Explore, Savor, and Embrace a Fresh and Vibrant Journey
                 </span>
-                <img
-                  src="/images/Decore_line.png"
-                  className="absolute top-[400px] left-[430px] h-[12px] w-[300px]"
-                  alt=""
-                />
               </div>
               <div>
-                <span className="text-lightPurpleText">
-                  Built Wicket longer admire do barton vanity itself do in it.
-                  Preferred to sportsmen it engrossed listening. Park gate sell
-                  they west hard for the.
+                <span className="text-lightPurpleText  [text-wrap:balance]">
+                  The admiration for Barton's vanity in itself no longer exists
+                  in the built wicket. It was more engrossed in preferred
+                  sportsmen. They found it challenging to sell the park gate in
+                  the western area.
                 </span>
               </div>
               <div className="flex items-center space-x-6">
                 <a
-                  href="#"
-                  className="px-4 py-2.5 rounded-md bg-yellowColor text-textWhite"
+                  href="/hotel"
+                  className="px-4 py-2.5 rounded-md bg-[#0000FF] font-bold text-textWhite"
                 >
                   Find out more
                 </a>
@@ -71,8 +64,15 @@ function HeroSection({ currentUser }: Props) {
           </div>
         </div>
         <div>
-          <div className="absolute top-20 right-40">
-            <img src="/images/Traveller.png" className="" alt="" />
+          <div className="absolute top-44 right-40">
+            <Image
+              width={765}
+              height={764}
+              src="/images/clipart302257.png"
+              className="object-cover"
+              alt=""
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
