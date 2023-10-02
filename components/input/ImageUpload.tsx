@@ -35,7 +35,7 @@ function ImageUpload({ onChange, value }: Props) {
       {({ open, isLoading }) => {
         if (isLoading)
           return (
-            <div className="h-20">
+            <div className="flex items-center justify-center w-full h-20">
               <p className="text-center">
                 <AiOutlineLoading3Quarters
                   className=" animate-spin"
