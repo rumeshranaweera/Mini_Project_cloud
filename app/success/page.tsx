@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Success = () => {
   return (
-    <div className="container min-h-[50vh]">
+    <div className="container min-h-[50vh] mx-auto">
       <div className="">
         <div className="p-6 bg-white md:mx-auto">
           <svg

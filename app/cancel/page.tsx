@@ -3,7 +3,7 @@ import { MdCancel } from "react-icons/md";
 
 const Cancel = () => {
   return (
-    <div className="container min-h-[50vh]">
+    <div className="container min-h-[50vh] mx-auto">
       <div className="">
         <div className="p-6 bg-white md:mx-auto">
           <MdCancel className="w-16 h-16 mx-auto text-red-600" />
