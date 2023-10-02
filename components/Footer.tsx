@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Image from "next/image";
 import {
   AiFillFacebook,
   AiFillInstagram,
@@ -15,11 +16,12 @@ function Footer({}: Props) {
       <div className="flex md:flex-row flex-col items-center justify-between">
         <div className="flex flex-col items-start gap-10 basis-1/3">
           <div className="flex items-center justify-center gap-2">
-            <img
-              src="https://p7.hiclipart.com/preview/893/122/385/travel-agent-trip-planner-logo-travel.jpg"
+            <Image
+              src="/logo.png"
+              width={64}
+              height={64}
               alt="logo"
               className="h-16 rounded-md"
-              loading="lazy"
             />
             <h1 className="text-sm text-secondary-100 font-bold">
               <span className="text-primary-500"></span>Onine Booking <br />

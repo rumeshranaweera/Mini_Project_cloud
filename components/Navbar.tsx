@@ -10,6 +10,7 @@ import AuthFormModel from "./model/AuthFormModel";
 import ChooseModel from "./model/ChooseModel";
 import DestinationModel from "./model/DestinationModel";
 import RentModal from "./model/RentModal";
+import Image from "next/image";
 
 type Props = {
   currentUser?: SafeUser | null;
@@ -61,10 +62,12 @@ function Navbar({ currentUser }: Props) {
         <div className="flex items-center justify-between">
           <div>
             <Link href={"/"}>
-              <img
-                src="https://p7.hiclipart.com/preview/893/122/385/travel-agent-trip-planner-logo-travel.jpg"
-                alt=""
-                className="rounded-md h-14"
+              <Image
+                src="/logo.png"
+                width={64}
+                height={64}
+                alt="logo"
+                className="h-16 rounded-md"
               />
             </Link>
           </div>
