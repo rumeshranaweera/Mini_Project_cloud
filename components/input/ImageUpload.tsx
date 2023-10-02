@@ -3,6 +3,7 @@
 import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
 import { useCallback } from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { TbPhotoPlus } from "react-icons/tb";
 
 declare global {
@@ -25,21 +26,33 @@ function ImageUpload({ onChange, value }: Props) {
   return (
     <CldUploadWidget
       onUpload={handleCallback}
-      uploadPreset="roxbpdrq"
+      // uploadPreset="roxbpdrq"
+      uploadPreset="in5gndv7"
       options={{
         maxFiles: 1,
       }}
     >
-      {({ open }) => {
+      {({ open, isLoading }) => {
+        if (isLoading)
+          return (
+            <div className="h-20">
+              <p className="text-center">
+                <AiOutlineLoading3Quarters
+                  className=" animate-spin"
+                  size={50}
+                />
+              </p>
+            </div>
+          );
         return (
           <div
             onClick={() => open?.()}
-            className=" relative cursor-pointer hover:opacity-70 transition border-dashed border-2 p-20 border-neutral-300 flex flex-col justify-center items-center gap-4 text-neutral-600"
+            className="relative flex flex-col items-center justify-center gap-4 p-20 transition border-2 border-dashed cursor-pointer hover:opacity-70 border-neutral-300 text-neutral-600"
           >
             <TbPhotoPlus size={50} />
-            <div className="font-semibold text-lg">Click to upload</div>
+            <div className="text-lg font-semibold">Click to upload</div>
             {value && (
-              <div className=" absolute inset-0 w-full h-full">
+              <div className="absolute inset-0 w-full h-full ">
                 <Image
                   alt="uploade"
                   fill

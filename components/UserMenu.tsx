@@ -10,6 +10,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 import Avatar from "./Avatar";
 import MenuItem from "./MenuItem";
+import Link from "next/link";
 
 type Props = {
   setRentIsOpen?: () => void;
@@ -28,7 +29,7 @@ function UserMenu({ setRentIsOpen, currentUser }: Props) {
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
         <div
-          className="hidden md:block font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer uppercase"
+          className="hidden px-4 py-3 font-semibold uppercase transition rounded-full cursor-pointer md:block hover:bg-neutral-100"
           onClick={setRentIsOpen}
         >
           Become a Hoister
@@ -63,22 +64,18 @@ function UserMenu({ setRentIsOpen, currentUser }: Props) {
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
-                <MenuItem
-                  onClick={() => router.push("/trips")}
-                  label="My Trips"
-                />
-                <MenuItem
-                  onClick={() => router.push("/favorites")}
-                  label="My Favorites"
-                />
-                <MenuItem
-                  onClick={() => router.push("/reservations")}
-                  label="My Reservations"
-                />
-                <MenuItem
-                  onClick={() => router.push("/properties")}
-                  label="My Properties"
-                />
+                <Link href={"/trips"}>
+                  <MenuItem onClick={() => {}} label="My Trips" />
+                </Link>
+                <Link href={"/favorites"}>
+                  <MenuItem onClick={() => {}} label="My Favorites" />
+                </Link>
+                <Link href={"/reservations"}>
+                  <MenuItem onClick={() => {}} label="My Reservations" />
+                </Link>
+                <Link href={"/properties"}>
+                  <MenuItem onClick={() => []} label="My Properties" />
+                </Link>
                 <hr />
                 <MenuItem onClick={() => signOut()} label="Logout" />
               </>

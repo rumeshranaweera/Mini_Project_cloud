@@ -4,7 +4,7 @@
 import { exploreCountries } from "@/utils/exploreCountries";
 import { fadeIn } from "@/utils/motion";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type Props = {};
 
@@ -15,20 +15,19 @@ interface CountriesType {
 }
 
 function Countries({}: Props) {
-  const router = useRouter();
-
   const ExploreCountry = ({ country, image, index }: CountriesType) => {
     return (
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         className="flex flex-col items-center justify-center"
-        onClick={() => router.push("/destinations")}
       >
-        <img
-          src={image}
-          alt={country}
-          className="hover:cursor-pointer mt-10 sm:mt-0"
-        />
+        <Link href={"/destinations"}>
+          <img
+            src={image}
+            alt={country}
+            className="mt-10 hover:cursor-pointer sm:mt-0"
+          />
+        </Link>
 
         <p className="mt-5 font-semibold text-center">{country}</p>
       </motion.div>
@@ -50,9 +49,9 @@ function Countries({}: Props) {
           }}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.25 }}
+          viewport={{ once: true, amount: 0.25 }}
         >
-          <h1 className="text-secondary-100 text-4xl font-semibold">
+          <h1 className="text-4xl font-semibold text-secondary-100">
             Countries
           </h1>
           <p className="mt-2">
@@ -60,7 +59,7 @@ function Countries({}: Props) {
             <br />
             explore over 10+ European countries with one simple touch.
           </p>
-          <div className="flex sm:flex-row flex-col items-center justify-between py-10">
+          <div className="flex flex-col items-center justify-between py-10 sm:flex-row">
             {exploreCountries.map((country, index) => {
               return (
                 <ExploreCountry

@@ -2,9 +2,9 @@
 "use client";
 
 import { SafeUser } from "@/types";
-import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
+import Link from "next/link";
 import UserMenu from "./UserMenu";
 import AuthFormModel from "./model/AuthFormModel";
 import ChooseModel from "./model/ChooseModel";
@@ -16,7 +16,6 @@ type Props = {
 };
 
 function Navbar({ currentUser }: Props) {
-  const router = useRouter();
   const [checkType, setIsType] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [rentIsOpen, setRentIsOpen] = useState(false);
@@ -61,47 +60,38 @@ function Navbar({ currentUser }: Props) {
       <div className="px-40 py-6">
         <div className="flex items-center justify-between">
           <div>
-                <img
-              src="https://dl.dropboxusercontent.com/s/ywn0n6m41kep83t/image.png"
-              alt=""
-              className="h-14 rounded-md"
-            /> 
+            <Link href={"/"}>
+              <img
+                src="https://dl.dropboxusercontent.com/s/ywn0n6m41kep83t/image.png"
+                alt=""
+                className="rounded-md h-14"
+              />
+            </Link>
           </div>
-          <div className="flex items-center space-x-12 z-50">
-            <p
-              onClick={() => router.push("/")}
-              className="font-semibold cursor-pointer hover:underline uppercase"
+          <div className="z-50 flex items-center space-x-12">
+            <Link
+              href={"/"}
+              className="font-semibold uppercase cursor-pointer hover:underline"
             >
               Home
-            </p>
-            <p
-              onClick={() => router.push("/destinations")}
-              className="font-semibold cursor-pointer hover:underline uppercase"
+            </Link>
+            <Link
+              href={"/destinations"}
+              className="font-semibold uppercase cursor-pointer hover:underline"
             >
               Destinations
-            </p>
-            <p
-              onClick={() => router.push("/hotel")}
-              className="font-semibold cursor-pointer hover:underline uppercase"
+            </Link>
+            <Link
+              href={"/hotel"}
+              className="font-semibold uppercase cursor-pointer hover:underline"
             >
               Hotels
-            </p>
-            <p
-              onClick={() => router.push("/flight")}
-              className="font-semibold cursor-pointer hover:underline uppercase"
-            >
-              Flights
-            </p>
-            <p
-              onClick={() => router.push("/car")}
-              className="font-semibold cursor-pointer hover:underline uppercase"
-            >
-              Cars
-            </p>
+            </Link>
+
             {!currentUser && (
               <p
                 onClick={() => setIsOpen(true)}
-                className="font-semibold cursor-pointer hover:underline uppercase"
+                className="font-semibold uppercase cursor-pointer hover:underline"
               >
                 Become a Hoister
               </p>

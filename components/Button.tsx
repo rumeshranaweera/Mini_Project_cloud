@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import React from "react";
 import { IconType } from "react-icons";
 
@@ -11,6 +12,7 @@ type Props = {
   small?: boolean;
   icon?: IconType;
   isColor?: boolean;
+  className?: string;
 };
 
 function Button({
@@ -21,18 +23,20 @@ function Button({
   small,
   icon: Icon,
   isColor,
+  className,
 }: Props) {
   return (
     <button
       disabled={disabled}
       onClick={onClick}
-      className={`relative disabled:opacity-70 disabled:cursor-not-allowed rounded-lg hover:opacity-80 transition w-full ${
+      className={cn(`relative disabled:opacity-70 disabled:cursor-not-allowed rounded-lg hover:opacity-80 transition w-full ${
         outline ? "bg-white" : "bg-[#0000FF]"
       } ${outline ? "border-black" : "border-blue-500"} ${
         outline ? "text-black" : "text-white"
       } ${small ? "text-sm" : "text-md"} ${small ? "py-1" : "py-3"} ${
         small ? "font-light" : "font-semibold"
-      } ${small ? "border-[1px]" : "border-2"}`}
+      } ${small ? "border-[1px]" : "border-2"}
+      ${className}`)}
     >
       {Icon && (
         <Icon

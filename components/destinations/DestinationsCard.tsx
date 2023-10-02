@@ -50,11 +50,11 @@ function DestinationsCard({
       onClick={() => router.push(`/destinations/${destinations.id}`)}
       className="col-span-1 cursor-pointer group"
     >
-      <div className="flex flex-col gap-2 w-full">
-        <div className="aspect-square w-full relative overflow-hidden rounded-xl">
+      <div className="flex flex-col w-full gap-2">
+        <div className="relative w-full overflow-hidden aspect-square rounded-xl">
           <Image
             fill
-            className="object-cover h-full w-full group-hover:scale-110 transition"
+            className="object-cover w-full h-full transition group-hover:scale-110"
             src={destinations.imageSrc}
             alt="listing"
           />
