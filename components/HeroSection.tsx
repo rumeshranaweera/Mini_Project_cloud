@@ -10,16 +10,20 @@ type Props = {
 
 function HeroSection({ currentUser }: Props) {
   return (
-    <div className="px-60 py-6">
+    <div className="py-6 px-60">
       <div>
-        <img src="/blob-haikei.svg" className="absolute right-0 top-0" alt="" />
+        <img
+          src="/blob-haikei.svg"
+          className="absolute top-0 right-0 -z-50"
+          alt=""
+        />
       </div>
-      <div className="pt-48 flex items-center">
+      <div className="flex items-center pt-48">
         <div className="w-[450px]">
           <div>
             <div className="grid gap-4">
               <div className="grid gap-4">
-                <span className="text-blue-800 font-bold text-2xl">
+                <span className="text-2xl font-bold text-blue-800">
                   Best Destinations around the world
                 </span>
                 <span className="font-bold text-6xl text-purpleText z-50  [text-wrap:balance]">
@@ -42,7 +46,7 @@ function HeroSection({ currentUser }: Props) {
                   Find out more
                 </a>
                 <div className="flex items-center space-x-3">
-                  <div className="rounded-full  bg-buttonColor p-2  text-textWhite">
+                  <div className="p-2 rounded-full bg-buttonColor text-textWhite">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
