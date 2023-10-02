@@ -68,7 +68,7 @@ function HeroSection({ currentUser }: Props) {
           </div>
         </div>
         <div>
-          <div className="absolute top-44 right-40">
+          <div className="absolute top-44 right-40 -z-50">
             <Image
               width={765}
               height={764}
