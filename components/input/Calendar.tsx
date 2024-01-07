@@ -14,6 +14,7 @@ type Props = {
 
 function Calendar({ value, onChange, disabledDates }: Props) {
   return (
+    //@ts-expect-error
     <DateRange
       rangeColors={["#262626"]}
       ranges={[value]}
