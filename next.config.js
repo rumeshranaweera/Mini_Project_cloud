@@ -8,8 +8,10 @@ const nextConfig = {
       "lh3.googleusercontent.com",
       "res.cloudinary.com",
       "avatars.githubusercontent.com",
+      "images.unsplash.com",
+      "dl.dropboxusercontent.com",
     ],
   },
 };
 
-module.exports = nextConfig;
+module.exports = nextConfig;

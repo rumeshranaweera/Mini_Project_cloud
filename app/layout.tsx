@@ -22,10 +22,10 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={"bg-neutral-200" + inter.className}>
+      <body className={`bg-neutral-100 antialiased ${inter.className}`}>
         <Navbar currentUser={currentUser} />
         <ToastContainerBar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

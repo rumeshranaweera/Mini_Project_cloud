@@ -12,7 +12,7 @@ function ErrorState({ error }: Props) {
     console.log("🚀 ~ file: error.tsx:12 ~ ErrorState ~ error:", error);
   }, [error]);
 
-  return <EmptyState title="Uh Oh" subtitle="Something went wrong!" />;
+  return <EmptyState title="Ops" subtitle="Something went wrong!" />;
 }
 
 export default ErrorState;

@@ -9,12 +9,14 @@ import getCurrentUser from "./actions/getCurrentUser";
 export default async function Home() {
   const currentUser = await getCurrentUser();
   return (
-    <ClientOnly>
+    // <ClientOnly>
+    <>
       <HeroSection currentUser={currentUser} />
       <Countries />
       <Destination />
       <AboutUs />
       <Contact />
-    </ClientOnly>
+    </>
+    // </ClientOnly>
   );
 }
