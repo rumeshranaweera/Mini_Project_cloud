@@ -16,6 +16,10 @@ import Search from "./Search";
 import Calendar from "./input/Calendar";
 import Counter from "./input/Counter";
 import CountrySelect, { CountrySelectValue } from "./input/CountrySelect";
+// const Map = dynamic(() => import("./input/Map"), {
+//   ssr: false,
+// });
+import Map from "./input/Map";
 
 type Props = {
   category: string;
@@ -34,13 +38,13 @@ function SearchingFilter({ category }: Props) {
     key: "selection",
   });
 
-  const Map = useMemo(
-    () =>
-      dynamic(() => import("./input/Map"), {
-        ssr: false,
-      }),
-    [location]
-  );
+  // const Map = useMemo(
+  //   () =>
+  //     dynamic(() => import("./input/Map"), {
+  //       ssr: false,
+  //     }),
+  //   [location]
+  // );
 
   const onSubmit = useCallback(async () => {
     let currentQuery = {};
@@ -86,8 +90,8 @@ function SearchingFilter({ category }: Props) {
 
   return (
     <div className="w-full p-4 bg-gray-50  max-w-[90%] mx-auto rounded-xl shadow-xl">
-      <div className="flex-col py-3 border-0 gap-y-8 md:gap-y-0 flex justify-start items-center md:flex md:justify-between md:flex-row md:border-b dark:border-dark ">
-        <div className="flex justify-start items-center gap-x-5">
+      <div className="flex flex-col items-center justify-start py-3 border-0 gap-y-8 md:gap-y-0 md:flex md:justify-between md:flex-row md:border-b dark:border-dark ">
+        <div className="flex items-center justify-start gap-x-5">
           {category.toLocaleLowerCase() === "hotel" ? (
             <div className="flex items-center gap-x-2">
               <BiBed size={30} />
@@ -128,10 +132,10 @@ function SearchingFilter({ category }: Props) {
           </select>
         </div>
       </div>
-      <div className="inline-block md:flex justify-between items-center gap-x-8">
-        <div className="flex flex-col gap-2 w-full">
+      <div className="items-center justify-between inline-block md:flex gap-x-8">
+        <div className="flex flex-col w-full gap-2">
           <p className="text-xl font-bold">Where do you wanna go?</p>
-          <p className="font-light text-neutral-500 mt-2">
+          <p className="mt-2 font-light text-neutral-500">
             Find the perfect location!
           </p>
           <div className="z-50">
@@ -145,9 +149,9 @@ function SearchingFilter({ category }: Props) {
           </div>
         </div>
         <div>
-          <div className="flex flex-col gap-2 w-full">
+          <div className="flex flex-col w-full gap-2">
             <p className="text-xl font-bold">Where do you wanna go?</p>
-            <p className="font-light text-neutral-500 mt-2">
+            <p className="mt-2 font-light text-neutral-500">
               Find the perfect location!
             </p>
             <div>
@@ -158,9 +162,9 @@ function SearchingFilter({ category }: Props) {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-8 w-full">
+        <div className="flex flex-col w-full gap-8">
           <p className="text-xl font-bold">Where do you wanna go?</p>
-          <p className="font-light text-neutral-500 mt-2">
+          <p className="mt-2 font-light text-neutral-500">
             Find the perfect location!
           </p>
           <Counter
