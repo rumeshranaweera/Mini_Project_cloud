@@ -152,6 +152,7 @@ function RentModal({ isOpen, onClose }: Props) {
           />
         </div>
         <div className="z-0">
+          {/* @ts-ignore */}
           <Map center={location?.latlng} />
         </div>
         <div className="flex justify-center gap-4">
