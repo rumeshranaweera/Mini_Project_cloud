@@ -40,7 +40,7 @@ function Map({ center, locationValue }: Props) {
           {center && (
             <Marker position={center as L.LatLngExpression}>
               <Popup>
-                <div className="flex justify-center items-center animate-bounce">
+                <div className="flex items-center justify-center animate-bounce">
                   <Flag code={locationValue} className="w-10" />
                 </div>
               </Popup>
