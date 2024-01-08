@@ -54,7 +54,7 @@
     "tailwindcss": "3.3.2",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.0.4",
-    "world-countries": "^4.1.1"
+    "world-countries": "^5.0.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
